@@ -1,0 +1,6 @@
+npm init -y  //to inititalize  package.json
+npm i nodemon -D //hot reload for development
+copilot //auto completion code - 3rd party extension
+npm install mongodb
+npm install mongoose //easily get access to mongoDB
+
