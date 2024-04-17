@@ -1,19 +1,19 @@
 const express = require('express')
 const mongoose = require('mongoose');
-const productRoute = require('./routes/product.route');
+const productRoute = require('./routes/route');
 const app = express()
 
 //middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 
 //routes
 app.use('/api/products', productRoute);
 
-app.get("/", (req, res) => {
-    res.send("Hello from API server");
-});
+// app.get("/", (req, res) => {
+//     res.send("Hello from API server");
+// });
 
 mongoose.connect("mongodb+srv://phurpawangchuk20:WbAYAnfpLtNhejQw@cluster0.e47qdme.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
